@@ -1,321 +1,375 @@
 <html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Up Your Game!</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-    <meta charset="utf-8">
-    <title> Up Your Game! </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+		/>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style>
+			@import url(http://fonts.googleapis.com/css?family=Montserrat);
+			@import url(https://fonts.googleapis.com/css?family=Lato);
+			@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+			@import url(https://fonts.googleapis.com/css?family=Noto+Sans+SC);
+			@import url(https://fonts.googleapis.com/css?family=Fira+Sans);
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
-        @import url(http://fonts.googleapis.com/css?family=Montserrat);
-        @import url(https://fonts.googleapis.com/css?family=Lato);
-        @import url(https://fonts.googleapis.com/css?family=PT+Sans);
-        @import url(https://fonts.googleapis.com/css?family=Noto+Sans+SC);
-        @import url(https://fonts.googleapis.com/css?family=Fira+Sans);
+			.background {
+				/* background-color: #0e6bbfff; */
+				background-image: url("http://www.espn.com/photo/2016/0125/010_Surf_JAWS.JPG");
+				padding-bottom: 15px;
+			}
 
-        .background {
-            /* background-color: #0e6bbfff; */
-            background-image: url("http://www.espn.com/photo/2016/0125/010_Surf_JAWS.JPG");
-            padding-bottom: 15px;
-        }
+			img {
+				height: 50px;
+				width: 300px;
+				margin-top: 20px;
+				margin-left: 170px;
+			}
 
-        img {
-            height: 50px;
-            width: 300px;
-            margin-top: 20px;
-            margin-left: 170px;
-        }
+			header {
+				color: white;
+				font-family: "Fira Sans", sans-serif;
+				font-size: 25px;
+				margin-left: 20px;
+				margin-top: 18px;
+			}
 
-        header {
-            color: white;
-            font-family: 'Fira Sans', sans-serif;
-            font-size: 25px;
-            margin-left: 20px;
-            margin-top: 18px;
-        }
+			#tools {
+				display: inline-block;
+				color: none;
+				margin-left: 33px;
+				font-family: "Fira Sans", sans-serif;
+				font-size: 19px;
+				background-color: transparent;
+				color: white;
+				border: none;
+			}
 
-        #tools {
-            display: inline-block;
-            color: none;
-            margin-left: 33px;
-            font-family: 'Fira Sans', sans-serif;
-            font-size: 19px;
-            background-color: transparent;
-            color: white;
-            border: none;
-        }
+			#sections {
+				margin-left: 420px;
+				display: inline-block;
+			}
 
-        #sections {
-            margin-left: 420px;
-            display: inline-block;
-        }
+			.search {
+				display: inline-block;
+			}
 
-        .search {
-            display: inline-block;
-        }
+			.searchcourse-button {
+				font-family: "Fira Sans", sans-serif;
+                margin-left: 5px;
+                margin-bottom: 70px;
+				font-size: 17px;
+				padding: 11 20 11 20;
+				border-radius: 3px;
+				color: white;
+				background-color: orange;
+                border: 0px;
+			}
 
-        .searchcourse-button {
-            font-family: 'Fira Sans', sans-serif;
-            margin-left: 5px;
-            font-size: 17px;
-            padding: 11 20 11 20;
-            border-radius: 3px;
-            color: white;
-            background-color: orange;
-            border: 0px;
-        }
+			.searchcourse-button:hover {
+				background-color: #13538eff;
+			}
 
-        .searchcourse-button:hover {
-            background-color: #13538eff;
-        }
+			.body {
+				text-align: center;
+			}
 
-        input[type=text] {
-            height: 50px;
-            width: 760px;
-            box-sizing: border-box;
-            border: 0px solid white;
-            border-radius: 3px;
-            font-size: 18px;
-            padding: 12px 20px 12px 10px;
-            margin-left: 330px;
-            margin-top: 30px;
-            margin-bottom: 100px;
-            font-family: 'Fira Sans', sans-serif;
-        }
+			input[type="text"] {
+				height: 50px;
+				width: 700px;
+				box-sizing: border-box;
+				border: 0px solid white;
+				border-radius: 3px;
+				font-size: 18px;
+				padding: 12px 20px 12px 10px;
+				margin-top: 30px;
+				margin-bottom: 100px;
+				font-family: "Fira Sans", sans-serif;
+				flex-grow: 1;
+			}
 
-        .intro {
-            font-family: 'Noto Sans SC', sans-serif;
-            font-size: 27px;
-            text-align: center;
-            color: white;
-            margin-top: 100px;
-            margin-bottom: 20px;
-            font-style: normal;
-        }
+			.intro {
+				font-family: "Noto Sans SC", sans-serif;
+				font-size: 27px;
+				text-align: center;
+				color: white;
+				margin-top: 100px;
+				margin-bottom: 20px;
+				font-style: normal;
+			}
 
-        .whyus {
-            font-family: 'Noto Sans SC', sans-serif;
-            font-size: 16px;
-            display: inline-block;
-            margin-left: 190px;
-            margin-bottom: 50px;
-            margin-top: 20px;
-            text-align: center;
-            color: black;
-            font-style: bold;
-        }
+			.whyus {
+				font-family: "Noto Sans SC", sans-serif;
+				font-size: 16px;
+				display: inline-block;
+				margin-left: 190px;
+				margin-bottom: 50px;
+				margin-top: 20px;
+				text-align: center;
+				color: black;
+				font-style: bold;
+			}
 
-        .arrangement {
-            margin-top: 20px;
-        }
+			.arrangement {
+				margin-top: 20px;
+			}
 
-        .modal {
-            display: hidden;
-            /* Hidden by default */
-            position: fixed;
-            /* Stay in place */
-            z-index: 1;
-            /* Sit on top */
-            padding-top: 100px;
-            /* Location of the box */
-            left: 0;
-            top: 0;
-            width: 100%;
-            /* Full width */
-            height: 100%;
-            /* Full height */
-            overflow: auto;
-            /* Enable scroll if needed */
-            background-color: rgb(0, 0, 0);
-            /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.4);
-            /* Black w/ opacity */
-        }
+			.modal {
+				display: hidden;
+				/* Hidden by default */
+				position: fixed;
+				/* Stay in place */
+				z-index: 1;
+				/* Sit on top */
+				padding-top: 100px;
+				/* Location of the box */
+				left: 0;
+				top: 0;
+				width: 100%;
+				/* Full width */
+				height: 100%;
+				/* Full height */
+				overflow: auto;
+				/* Enable scroll if needed */
+				background-color: rgb(0, 0, 0);
+				/* Fallback color */
+				background-color: rgba(0, 0, 0, 0.4);
+				/* Black w/ opacity */
+			}
 
-        /* Modal Content */
-        .modal-content {
-            position: relative;
-            background-color:white;
-            margin: auto;
-            margin-top: 50px;
-            padding: 0;
-            border: 1px solid #888;
-            width: 800px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            -webkit-animation-name: animatetop;
-            -webkit-animation-duration: 0.4s;
-            animation-name: animatetop;
-            animation-duration: 0.4s;
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            text-align: left;
-        }
+			/* Modal Content */
+			.modal-content {
+				position: relative;
+				background-color: white;
+				margin: auto;
+				margin-top: 50px;
+				padding: 0;
+				border: 1px solid #888;
+				width: 800px;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+					0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				-webkit-animation-name: animatetop;
+				-webkit-animation-duration: 0.4s;
+				animation-name: animatetop;
+				animation-duration: 0.4s;
+				font-family: "Lucida Sans", "Lucida Sans Regular",
+					"Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+					sans-serif;
+				text-align: left;
+			}
 
-        .modal-header {
-            padding: 2px 16px;
-            background-color:white;
-            color: black;
-            font-size: 45px;
-            text-align: center;
+			.modal-header {
+				padding: 2px 16px;
+				background-color: white;
+				color: black;
+				font-size: 45px;
+				text-align: center;
+			}
 
-        }
+			.modal-body {
+				padding: 2px 16px;
+				margin-top: 0px;
+				color: black;
+				font-size: 20px;
+				align-content: left;
+			}
 
-        .modal-body {
-            padding: 2px 16px;
-            margin-top: 0px;
-            color: black;
-            font-size: 20px;
-            align-content: left;
-        }
+			.login {
+				color: black;
+				font-size: 21px;
+				margin-left: 410px;
+				margin-top: 30px;
+			}
 
-        .login {
-            color: black;
-            font-size: 21px;
-            margin-left: 410px;
-            margin-top: 30px;
-        }
+			.form {
+				width: 500px;
+				margin-left: 50px;
+				color: black;
+				height: 35px;
+				border: 1px solid black;
+				font-size: 18px;
+				border-radius: 3px;
+			}
 
-        .form {
-            width: 500px;
-            margin-left: 50px;
-            color: black;
-            height: 35px;
-            border: 1px solid black;
-            font-size: 18px;
-            border-radius: 3px;
-        }
+			#modalSubmit {
+				margin-top: 15px;
+				margin-left: 625px;
+				margin-bottom: 15px;
+				background-color: orange;
+				color: white;
+				padding: 7 10 7 10;
+				border-radius: 3px;
+				font-size: 18px;
+            }
+            
+            .Centering {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+		</style>
+	</head>
 
-        #modalSubmit {
-            margin-top: 15px; 
-            margin-left: 625px; 
-            margin-bottom: 15px;
-            background-color: orange; 
-            color: white;
-            padding: 7 10 7 10;
-            border-radius: 3px; 
-            font-size: 18px;
-        }
+	<body>
+		<intro>
+			<div class="background">
+				<heading style="display: inline-block;">
+					<a href="./awshome.html"><img src="./TEST.svg"/></a>
+				</heading>
+				<div id="sections">
+					<button id="tools">About Us</button>
+					<button id="tools">Courses for You</button>
+					<button id="tools" class="signin">Sign In</button>
+				</div>
+				<div class="intro">
+					<p>
+						A personalized, interactive and integrated platform to
+						upskill
+					</p>
+					<p>
+						Singaporean working adults in their lifelong education
+					</p>
+				</div>
+				<div class="Centering">
+					<div class="search">
+						<input
+							type="text"
+							name="search"
+							id="search"
+							placeholder="Search for a course here"
+							class="form-control"
+							autocomplete="off"
+						/>
+					</div>
+					<input
+						type="button"
+						value="Search"
+						class="searchcourse-button"
+						style="display: inline-block;"
+					/>
+				</div>
+			</div>
+			<div style="background-color: #F2F2F2;">
+				<div class="whyus">
+					<div style="display:inline-block; margin-right: 80px;">
+						<img
+							src="https://image.flaticon.com/icons/svg/148/148968.svg"
+							style="height: 80px; width: 80px; margin-left: 10px;"
+						/>
+						<div class="arrangement">
+							<b>
+								<p>Credentials that are conferred to you</p>
+								<p>through Up Your Game are verified</p>
+								<p>and recognized by companies</p>
+							</b>
+						</div>
+					</div>
 
-
-    </style>
-</head>
-
-<body>
-    <intro>
-        <div class="background">
-            <heading style="display: inline-block;">
-                <a href = "./awshome.html"><img src="./TEST.svg"></a>
-            </heading>
-            <div id="sections">
-                <button id="tools"> About Us </button>
-                <button id="tools"> Courses for You </button>
-                <button id="tools" class="signin"> Sign In</button>
-            </div>
-            <div class="intro">
-                <p> A personalized, interactive and integrated platform to upskill</p>
-                <p>Singaporean working adults in their lifelong education </p>
-            </div>
-            <div class="search">
-                <input type="text" name="search" id="search" placeholder="Search for a course here" class="form-control"
-                    autocomplete="off" />
-            </div>
-            <input type="button" value="Search" class="searchcourse-button" style="display: inline-block;">
-        </div>
-        <div style="background-color: #F2F2F2;">
-            <div class="whyus">
-                <div style="display:inline-block; margin-right: 80px;">
-                    <img src="https://image.flaticon.com/icons/svg/148/148968.svg"
-                        style="height: 80px; width: 80px; margin-left: 10px;">
-                    <div class="arrangement">
-                        <b>
-                            <p> Credentials that are conferred to you</p>
-                            <p> through Up Your Game are verified </p>
-                            <p> and recognized by companies </p>
-                        </b>
-                    </div>
-                </div>
-
-                <div style="display:inline-block; margin-right: 80px;">
-                    <img src="https://image.flaticon.com/icons/svg/265/265755.svg"
-                        style="height: 80px; width: 80px; margin-left: 10px;">
-                    <div class="arrangement">
-                        <b>
-                            <p> Our AI-powered recommendation engine </p>
-                            <p> will suggest courses for you to enroll </p>
-                            <p> in based on your needs </p>
-                        </b>
-                    </div>
-                </div>
-                <div style="display:inline-block;">
-                    <img src="https://image.flaticon.com/icons/svg/321/321834.svg"
-                        style="height: 80px; width: 80px; margin-left: 10px;">
-                    <div class="arrangement">
-                        <b>
-                            <p> Our platform is seamlessly integrated with </p>
-                            <p> SkillsFuture so you do not have to worry </p>
-                            <p> about complicated administrative processes </p>
-                        </b>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </intro>
-    <!-- Modal -->
-    <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close" style = "margin-top: 10px;">&times;</span>
-                <h2>Sign In</h2>
-            </div>
-            <div class="modal-body">
-                <div class="login">
-                    <div>
-                        <div id="user" style="display: inline-block; margin-left: -360px;">
-                            <p> Email </p>
-                        </div>
-                        <input type="form" class="form" id="username"
-                            style="display: inline-block; margin-left: 93px;">
-                    </div>
-                    <div>
-                        <div id="pass" style="display: inline-block; margin-left: -360px; margin-top: 20px;">
-                            <p> Password </p>
-                        </div>
-                        <input type="password" class="form" id="password"
-                            style="display: inline-block; margin-left: 52px;">
-                    </div>
-                </div>
-                <input type="submit" value="Sign In" id="modalSubmit">
-            </div>
-        </div>
-    </div>
-</body>
-
+					<div style="display:inline-block; margin-right: 80px;">
+						<img
+							src="https://image.flaticon.com/icons/svg/265/265755.svg"
+							style="height: 80px; width: 80px; margin-left: 10px;"
+						/>
+						<div class="arrangement">
+							<b>
+								<p>Our AI-powered recommendation engine</p>
+								<p>will suggest courses for you to enroll</p>
+								<p>in based on your needs</p>
+							</b>
+						</div>
+					</div>
+					<div style="display:inline-block; margin-right: 80px;">
+						<img
+							src="https://image.flaticon.com/icons/svg/321/321834.svg"
+							style="height: 80px; width: 80px; margin-left: 10px;"
+						/>
+						<div class="arrangement">
+							<b>
+								<p>
+									Our platform is seamlessly integrated with
+								</p>
+								<p>SkillsFuture so you do not have to worry</p>
+								<p>
+									about complicated administrative processes
+								</p>
+							</b>
+						</div>
+					</div>
+				</div>
+			</div>
+		</intro>
+		<!-- Modal -->
+		<div id="myModal" class="modal">
+			<!-- Modal content -->
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="close" style="margin-top: 10px;">&times;</span>
+					<h2>Sign In</h2>
+				</div>
+				<div class="modal-body">
+					<div class="login">
+						<div>
+							<div
+								id="user"
+								style="display: inline-block; margin-left: -360px;"
+							>
+								<p>Email</p>
+							</div>
+							<input
+								type="form"
+								class="form"
+								id="username"
+								style="display: inline-block; margin-left: 93px;"
+							/>
+						</div>
+						<div>
+							<div
+								id="pass"
+								style="display: inline-block; margin-left: -360px; margin-top: 20px;"
+							>
+								<p>Password</p>
+							</div>
+							<input
+								type="password"
+								class="form"
+								id="password"
+								style="display: inline-block; margin-left: 52px;"
+							/>
+						</div>
+					</div>
+					<input type="submit" value="Sign In" id="modalSubmit" />
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
 
 <script>
-    var modal = document.getElementById("myModal");
-    // Get the button that opens the modal
-    /* var btn = document.getElementById("myBtn"); */
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-    // When the user clicks the button, open the modal
-    $('.signin').click(function () {
-        modal.style.display = "block";
-    });
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
+	var modal = document.getElementById("myModal");
+	// Get the button that opens the modal
+	/* var btn = document.getElementById("myBtn"); */
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+	// When the user clicks the button, open the modal
+	$(".signin").click(function() {
+		modal.style.display = "block";
+	});
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() {
+		modal.style.display = "none";
+	};
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	};
 
-    $('#modalSubmit').click(function () {
-        window.location = "./awsuser.html"
-    })
+	$("#modalSubmit").click(function() {
+		window.location = "./awsuser.html";
+	});
 </script>

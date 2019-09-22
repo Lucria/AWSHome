@@ -72,20 +72,20 @@
 
         input[type=text] {
             height: 50px;
-            width: 1000px;
+            width: 760px;
             box-sizing: border-box;
             border: 0px solid white;
             border-radius: 3px;
             font-size: 18px;
             padding: 12px 20px 12px 10px;
-            margin-left: 170px;
+            margin-left: 330px;
             margin-top: 30px;
             margin-bottom: 100px;
             font-family: 'Fira Sans', sans-serif;
         }
 
         .intro {
-            font-family: 'Fira Sans', sans-serif;
+            font-family: 'Noto Sans SC', sans-serif;
             font-size: 27px;
             text-align: center;
             color: white;
@@ -95,7 +95,7 @@
         }
 
         .whyus {
-            font-family: 'Fira Sans', sans-serif;
+            font-family: 'Noto Sans SC', sans-serif;
             font-size: 16px;
             display: inline-block;
             margin-left: 190px;
@@ -204,7 +204,7 @@
     <intro>
         <div class="background">
             <heading style="display: inline-block;">
-                <img src="file:///Users/keiftan/Desktop/TEST.svg">
+                <a href = "./awshome.html"><img src="./TEST.svg"></a>
             </heading>
             <div id="sections">
                 <button id="tools"> About Us </button>
@@ -283,7 +283,7 @@
                             <p> Password </p>
                         </div>
                         <input type="password" class="form" id="password"
-                            style="display: inline-block; margin-left: 55px;">
+                            style="display: inline-block; margin-left: 52px;">
                     </div>
                 </div>
                 <input type="submit" value="Sign In" id="modalSubmit">
@@ -314,4 +314,8 @@
             modal.style.display = "none";
         }
     }
+
+    $('#modalSubmit').click(function () {
+        window.location = "./awsuser.html"
+    })
 </script>

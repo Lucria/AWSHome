@@ -1,0 +1,221 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Up Your Game!</title>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+		/>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style>
+			@import url(http://fonts.googleapis.com/css?family=Montserrat);
+			@import url(https://fonts.googleapis.com/css?family=Lato);
+			@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+			@import url("https://fonts.googleapis.com/css?family=Noto+Sans&display=swap");
+			@import url(https://fonts.googleapis.com/css?family=Fira+Sans);
+			@import url("https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap");
+			@import url("https://fonts.googleapis.com/css?family=Oxygen&display=swap");
+			@import url("https://fonts.googleapis.com/css?family=Oxygen&display=swap");
+
+			.background {
+				/* background-color: #0e6bbfff; */
+				background-image: url("http://www.espn.com/photo/2016/0125/010_Surf_JAWS.JPG");
+				padding-bottom: 15px;
+			}
+
+			.newbackground {
+				background: rgba(255, 255, 255, 0.65);
+				margin-top: 40px;
+				margin-bottom: 98px;
+			}
+
+			img {
+				height: 50px;
+				width: 300px;
+				margin-top: 20px;
+				margin-left: 170px;
+			}
+
+			header {
+				color: white;
+				font-family: "Fira Sans", sans-serif;
+				font-size: 25px;
+				margin-left: 20px;
+				margin-top: 18px;
+			}
+
+			#tools {
+				display: inline-block;
+				color: none;
+				margin-left: 33px;
+				font-family: "Fira Sans", sans-serif;
+				font-size: 19px;
+				background-color: transparent;
+				color: white;
+				border: none;
+			}
+
+			#sections {
+				margin-left: 420px;
+				display: inline-block;
+			}
+
+			#profilepic {
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+				display: inline-block;
+				margin-top: -50px;
+			}
+
+			.info {
+				color: #faff6a;
+				font-size: 20px;
+				font-family: "Oxygen", sans-serif;
+				display: inline-block;
+				margin-left: 10px;
+			}
+
+			.profile {
+				margin-top: 35px;
+				margin-left: 410px;
+			}
+
+			#progress {
+				width: 500px;
+				height: 90px;
+				margin-left: 470px;
+				margin-top: 10px;
+			}
+
+			.cert {
+				font-size: 21px;
+				text-align: center;
+				color: #faff6a;
+				font-family: "Oxygen", sans-serif;
+				margin-top: -10px;
+			}
+
+			.section {
+				font-size: 23px;
+				color: #204fb9;
+				font-family: "Oxygen", sans-serif;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+
+			.mods {
+				font-size: 18px;
+				color: black;
+				font-family: "Oxygen", sans-serif;
+				text-align: center;
+				display: inline-block;
+				margin-bottom: 30px;
+				margin-top: 30px;
+			}
+
+			.vl {
+				border-left: 1.5px dashed #4c5259;
+				height: 180px;
+				display: inline-block;
+				margin-left: 100px;
+			}
+
+			#badges {
+				color: white;
+				font-family: "Oxygen", sans-serif;
+				display: inline-block;
+				font-size: 20px;
+				margin-top: -80px;
+				margin-left: 660px;
+				text-align: center;
+			}
+
+			#badge {
+				margin-left: 570px;
+				margin-top: -40px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="background">
+			<heading style="display: inline-block;">
+				<a href="./awshome.html"><img src="./TEST.svg"/></a>
+			</heading>
+			<div id="sections">
+				<button id="tools">About Us</button>
+				<button id="tools" class="recommend">Courses for You</button>
+				<button id="tools" class="signout">Sign Out</button>
+			</div>
+			<div class="profile">
+				<img
+					src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-1/c2.0.320.320a/p320x320/37145287_10156491710236591_7799242052088102912_n.jpg?_nc_cat=107&_nc_oc=AQnhG9z4YyEQSk-Wz9dobGxktNp5qTJNjFnGfxeNZqfwcBJXLIni9SkROGEDVMXxbyg&_nc_ht=scontent-sin6-1.xx&oh=2713011de40a6fd422bb2790d47fd586&oe=5E0BCA16"
+					id="profilepic"
+				/>
+				<div class="info">
+					<b>
+						<p style="font-size: 25px;">Keif Tan</p>
+						<p>Business Analyst</p>
+					</b>
+				</div>
+			</div>
+			<img src="./progress.svg" id="progress" />
+			<p class="cert">You are 78% through your journey of achieving</p>
+			<p class="cert">a Computer Science certificate!</p>
+			<div
+				style="text-align: center; margin-left: -50px;"
+				class="newbackground"
+			>
+				<div class="mods">
+					<b>
+						<p class="section">Your Completed Modules</p>
+					</b>
+					<p style="text-align: justify;">
+						CS1101 Programming Methodology
+					</p>
+					<p style="text-align: justify;">CS2102 Database Systems</p>
+					<p style="text-align: justify;">
+						CS3203 Software Engineering project
+					</p>
+				</div>
+				<!--             <div class="vl"></div>
+ -->
+				<div class="mods" style="margin-left: 200px;">
+					<b>
+						<p class="section">Your Current Modules</p>
+					</b>
+					<p style="text-align: justify;">
+						CS3210 Parallel Computing
+					</p>
+					<p style="text-align: justify;">
+						CS4244 Distributed Databases
+					</p>
+					<p style="text-align: justify;">
+						CS4234 Optimized Algorithms
+					</p>
+				</div>
+			</div>
+			<p id="badges">Your Badges</p>
+			<img
+				src="https://image.flaticon.com/icons/svg/2103/2103855.svg"
+				id="badge"
+			/>
+			<p
+				style="color: white; text-align: center; font-family: 'Oxygen', sans-serif; margin-top: 5px; margin-bottom: 20px;"
+			>
+				Data Scientist
+			</p>
+		</div>
+	</body>
+	<script>
+		$(".signout").click(function() {
+			window.location = "./awshome.html";
+        });
+        $(".recommend").click(function() {
+            window.location = "./courserecommendation.html"
+        })
+    </script>
+</html>

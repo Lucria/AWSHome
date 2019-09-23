@@ -21,6 +21,8 @@
 			.background {
 				background-image: url("./background.jpg");
 				padding-bottom: 15px;
+				background-repeat: no-repeat;
+				background-size: auto;
 			}
 
 			img {
@@ -35,7 +37,7 @@
 				text-align: center;
 				color: white;
 				margin-top: 100px;
-				margin-bottom: 20px;
+				margin-bottom: 50px;
 				font-style: normal;
 			}
 
@@ -59,6 +61,24 @@
 				justify-content: space-around;
 				align-items: center;
 			}
+
+			.suggestions {
+				font-family: "Noto Sans SC", sans-serif;
+				font-size: 16px;
+				display: flex;
+				margin-bottom: 50px;
+				margin-top: 20px;
+				text-align: center;
+				color: black;
+				font-style: bold;
+				justify-items: center;
+			}
+
+			.arrangement {
+				margin-top: 20px;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
 		</style>
 	</head>
 	<body>
@@ -72,9 +92,16 @@
 					<button id="tools" class="recommend">
 						Courses for You
 					</button>
-					<button id="tools" class="signout">Sign Out</button>
+					<button
+						id="tools"
+						class="signout"
+						style="margin-left: 19px"
+					>
+						Sign Out
+					</button>
 				</div>
 			</div>
+
 			<div class="intro">
 				<p>These are the recommended courses for you to take!</p>
 				<p>
@@ -83,42 +110,51 @@
 			</div>
 		</div>
 
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-4">
-					<h3>Column 1</h3>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing
-						elit...
-					</p>
-					<p>
-						Ut enim ad minim veniam, quis nostrud exercitation
-						ullamco laboris...
-					</p>
-				</div>
-				<div class="col-sm-4">
-					<h3>Column 2</h3>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing
-						elit...
-					</p>
-					<p>
-						Ut enim ad minim veniam, quis nostrud exercitation
-						ullamco laboris...
-					</p>
-				</div>
-				<div class="col-sm-4">
-					<h3>Column 3</h3>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing
-						elit...
-					</p>
-					<p>
-						Ut enim ad minim veniam, quis nostrud exercitation
-						ullamco laboris...
-					</p>
+		<div class="container-fluid">
+			<div
+				class="row"
+				style="background-color: #F2F2F2; justify-content: center"
+			>
+				<div class="suggestions" style="justify-content: center">
+					<div class="col">
+						<h3> NICF - Problem Solving using Pattern Recognition (SF) </h3>
+						<div class="arrangement">
+							<b>
+								<p>Under the field of</p>
+								<p>Pattern Recognition Systems</p>
+								<p>Reference no. CRS-Q-0035256-ICT</p>
+							</b>
+						</div>
+					</div>
+					<div class="col">
+						<h3> NICF - Vision Systems (SF) </h3>
+						<div class="arrangement">
+							<b>
+								<p>Under the field of</p>
+								<p>Intelligent Sensing Systems</p>
+								<p>Reference no. CRS-Q-0033975-ICT</p>
+							</b>
+						</div>
+					</div>
+					<div class="col">
+						<h3> NICF - Intelligent Process Automation (SF) </h3>
+						<div class="arrangement">
+							<b>
+								<p>Under the field of</p>
+								<p>Intelligent Software Agents</p>
+								<p>Reference no. CRS-Q-0038509-ICT</p>
+							</b>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
+		"
 	</body>
+
+	<script>
+		$(".signout").click(function() {
+			window.location = "./awshome.html";
+		});
+	</script>
 </html>

@@ -23,9 +23,10 @@
 			.background {
 				/* background-color: #0e6bbfff; */
 				background-image: url("./background.jpg");
-				padding-bottom: 15px;
 				background-repeat: no-repeat;
-				background-size: auto;
+				background-size: cover;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
 				height: 100%;
 			}
 
@@ -152,7 +153,6 @@
 				justify-content: space-around;
 				align-items: center;
 			}
-
 		</style>
 	</head>
 
@@ -178,22 +178,19 @@
 			</div>
 
 			<div class="profile">
-				<img
-					src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-1/c2.0.320.320a/p320x320/37145287_10156491710236591_7799242052088102912_n.jpg?_nc_cat=107&_nc_oc=AQnhG9z4YyEQSk-Wz9dobGxktNp5qTJNjFnGfxeNZqfwcBJXLIni9SkROGEDVMXxbyg&_nc_ht=scontent-sin6-1.xx&oh=2713011de40a6fd422bb2790d47fd586&oe=5E0BCA16"
-					id="profilepic"
-				/>
+				<img src="./human2.jpg" id="profilepic" />
 				<div class="info">
 					<b>
-						<p style="font-size: 25px;">Keif Tan</p>
-						<p>Business Analyst</p>
+						<p style="font-size: 25px;">Cai Peng Fei</p>
+						<p>Material Scientist</p>
 					</b>
 				</div>
 			</div>
 			<div class="center">
 				<img src="./progress.svg" id="progress" />
 			</div>
-			<p class="cert">You are 48% through your journey of achieving</p>
-			<p class="cert">an Artificial Intelligence certificate!</p>
+			<p class="cert">You are 23% through your journey of achieving</p>
+			<p class="cert">a Data Science certificate!</p>
 			<div
 				style="text-align: center; margin-left: -50px;"
 				class="newbackground"
@@ -203,11 +200,11 @@
 						<p class="section">Your Completed Modules</p>
 					</b>
 					<p style="text-align: justify;">
-						CS1101 Programming Methodology
+						NICF - Data Storytelling
 					</p>
-					<p style="text-align: justify;">CS2102 Database Systems</p>
+					<p style="text-align: justify;"></p>
 					<p style="text-align: justify;">
-						CS3203 Software Engineering project
+						NICF - Customer Analytics
 					</p>
 				</div>
 				<div class="mods" style="margin-left: 200px;">
@@ -215,14 +212,12 @@
 						<p class="section">Your Current Modules</p>
 					</b>
 					<p style="text-align: justify;">
-						CS3210 Parallel Computing
+						NICF - Data Governance & Protection
 					</p>
 					<p style="text-align: justify;">
-						CS4244 Distributed Databases
+						NICF - Advanced Customer Analytics
 					</p>
-					<p style="text-align: justify;">
-						CS4234 Optimized Algorithms
-					</p>
+					<p style="text-align: justify;"></p>
 				</div>
 			</div>
 			<div class="center">
@@ -235,7 +230,7 @@
 					<p
 						style="color: white; text-align: center; font-family: 'Oxygen', sans-serif; margin-top: 10px; margin-bottom: 20px;"
 					>
-						Data Scientist
+						Material Scientist
 					</p>
 				</div>
 			</div>
@@ -246,7 +241,7 @@
 			window.location = "./awshome.html";
 		});
 		$(".recommend").click(function() {
-			window.location = "./courserecommendation.html";
+			window.location = "./courserecommendation2.html";
 		});
 	</script>
 </html>

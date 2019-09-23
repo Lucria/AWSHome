@@ -19,11 +19,11 @@
 
 			.background {
 				/* background-color: #0e6bbfff; */
-				background-image: url("./background.jpg");
-                padding-bottom: 15px;
-                background-repeat: no-repeat;
-                background-size: auto;
-                height: 100%;
+				background-image: url("./newbackground.jpg");
+				padding-bottom: 15px;
+				background-repeat: no-repeat;
+				background-size: auto;
+				height: 100vh;
 			}
 
 			img {
@@ -263,60 +263,67 @@
 						style="display: inline-block;"
 					/>
 				</div>
-			</div>
-			<div class="row" style="background-color: #F2F2F2;">
-				<div class="whyus" style="justify-content: center">
-					<div
-						class="col"
-						style="display:inline-block; vertical-align: middle"
-					>
-						<img
-							src="https://image.flaticon.com/icons/svg/148/148968.svg"
-							style="height: 80px; width: 80px; margin-left: 10px;"
-						/>
-						<div class="arrangement">
-							<b>
-								<p>Credentials that are conferred to you</p>
-								<p>through Up Your Game are verified</p>
-								<p>and recognized by companies</p>
-							</b>
-						</div>
-					</div>
 
-					<div
-						class="col"
-						style="display:inline-block; vertical-align: middle"
-					>
-						<img
-							src="https://image.flaticon.com/icons/svg/265/265755.svg"
-							style="height: 80px; width: 80px; margin-left: 10px;"
-						/>
-						<div class="arrangement">
-							<b>
-								<p>Our AI-powered recommendation engine</p>
-								<p>will suggest courses for you to enroll</p>
-								<p>in based on your needs</p>
-							</b>
+				<div class="row" style="background-color: #F2F2F2;">
+					<div class="whyus" style="justify-content: center">
+						<div
+							class="col"
+							style="display:inline-block; vertical-align: middle"
+						>
+							<img
+								src="https://image.flaticon.com/icons/svg/148/148968.svg"
+								style="height: 80px; width: 80px; margin-left: 10px;"
+							/>
+							<div class="arrangement">
+								<b>
+									<p>Credentials that are conferred to you</p>
+									<p>through Up Your Game are verified</p>
+									<p>and recognized by companies</p>
+								</b>
+							</div>
 						</div>
-					</div>
-					<div
-						class="col"
-						style="display:inline-block; vertical-align: middle"
-					>
-						<img
-							src="https://image.flaticon.com/icons/svg/321/321834.svg"
-							style="height: 80px; width: 80px; margin-left: 10px;"
-						/>
-						<div class="arrangement">
-							<b>
-								<p>
-									Our platform is seamlessly integrated with
-								</p>
-								<p>SkillsFuture so you do not have to worry</p>
-								<p>
-									about complicated administrative processes
-								</p>
-							</b>
+
+						<div
+							class="col"
+							style="display:inline-block; vertical-align: middle"
+						>
+							<img
+								src="https://image.flaticon.com/icons/svg/265/265755.svg"
+								style="height: 80px; width: 80px; margin-left: 10px;"
+							/>
+							<div class="arrangement">
+								<b>
+									<p>Our AI-powered recommendation engine</p>
+									<p>
+										will suggest courses for you to enroll
+									</p>
+									<p>in based on your needs</p>
+								</b>
+							</div>
+						</div>
+						<div
+							class="col"
+							style="display:inline-block; vertical-align: middle"
+						>
+							<img
+								src="https://image.flaticon.com/icons/svg/321/321834.svg"
+								style="height: 80px; width: 80px; margin-left: 10px;"
+							/>
+							<div class="arrangement">
+								<b>
+									<p>
+										Our platform is seamlessly integrated
+										with
+									</p>
+									<p>
+										SkillsFuture so you do not have to worry
+									</p>
+									<p>
+										about complicated administrative
+										processes
+									</p>
+								</b>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -359,10 +366,13 @@
 								id="password"
 								style="display: inline-block; margin-left: 52px;"
 							/>
-                        </div>
-                        <div id="errors" style="display: inline-block; margin-left: -360px; margin-top: 40px;">
-                            <p></p>
-                        </div>
+						</div>
+						<div
+							id="errors"
+							style="display: inline-block; margin-left: -360px; margin-top: 40px;"
+						>
+							<p></p>
+						</div>
 					</div>
 					<input type="submit" value="Sign In" id="modalSubmit" />
 				</div>
@@ -393,15 +403,15 @@
 	};
 
 	$("#modalSubmit").click(function() {
-        var emailInfo = document.getElementById("username").value;
-        if ( emailInfo == "keif@nus.edu.sg") {
-            window.location = "./awsuser.html";
-        } else if (emailInfo == "cpf@nus.edu.sg") {
-            window.location = "./awsuser2.html";
-        } else {
-            // Update model with wrong username
-            var errorMessage = "Wrong Email! Please enter a valid email!";
-            document.getElementById("errors").innerHTML = errorMessage;
-        }
+		var emailInfo = document.getElementById("username").value;
+		if (emailInfo == "keif@nus.edu.sg") {
+			window.location = "./awsuser.html";
+		} else if (emailInfo == "cpf@nus.edu.sg") {
+			window.location = "./awsuser2.html";
+		} else {
+			// Update model with wrong username
+			var errorMessage = "Wrong Email! Please enter a valid email!";
+			document.getElementById("errors").innerHTML = errorMessage;
+		}
 	});
 </script>

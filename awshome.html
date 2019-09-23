@@ -19,7 +19,7 @@
 
 			.background {
 				/* background-color: #0e6bbfff; */
-				background-image: url("http://www.espn.com/photo/2016/0125/010_Surf_JAWS.JPG");
+				background-image: url("./background.jpg");
 				padding-bottom: 15px;
 			}
 
@@ -27,7 +27,6 @@
 				height: 50px;
 				width: 300px;
 				margin-top: 20px;
-				margin-left: 170px;
 			}
 
 			header {
@@ -50,7 +49,6 @@
 			}
 
 			#sections {
-				margin-left: 420px;
 				display: inline-block;
 			}
 
@@ -60,14 +58,14 @@
 
 			.searchcourse-button {
 				font-family: "Fira Sans", sans-serif;
-                margin-left: 5px;
-                margin-bottom: 70px;
+				margin-left: 5px;
+				margin-bottom: 70px;
 				font-size: 17px;
 				padding: 11 20 11 20;
 				border-radius: 3px;
 				color: white;
 				background-color: orange;
-                border: 0px;
+				border: 0px;
 			}
 
 			.searchcourse-button:hover {
@@ -105,8 +103,7 @@
 			.whyus {
 				font-family: "Noto Sans SC", sans-serif;
 				font-size: 16px;
-				display: inline-block;
-				margin-left: 190px;
+				display: flex;
 				margin-bottom: 50px;
 				margin-top: 20px;
 				text-align: center;
@@ -116,6 +113,8 @@
 
 			.arrangement {
 				margin-top: 20px;
+				margin-left: 20px;
+				margin-right: 20px;
 			}
 
 			.modal {
@@ -204,27 +203,36 @@
 				padding: 7 10 7 10;
 				border-radius: 3px;
 				font-size: 18px;
-            }
-            
-            .Centering {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
+			}
+
+			.Centering {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.topnav {
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+			}
 		</style>
 	</head>
 
 	<body>
 		<intro>
 			<div class="background">
-				<heading style="display: inline-block;">
-					<a href="./awshome.html"><img src="./TEST.svg"/></a>
-				</heading>
-				<div id="sections">
-					<button id="tools">About Us</button>
-					<button id="tools">Courses for You</button>
-					<button id="tools" class="signin">Sign In</button>
+				<div class="topnav">
+					<heading style="display: inline-block;">
+						<a href="./awshome.html"><img src="./TEST.svg"/></a>
+					</heading>
+					<div id="sections">
+						<button id="tools">About Us</button>
+						<button id="tools">Courses for You</button>
+						<button id="tools" class="signin">Sign In</button>
+					</div>
 				</div>
+
 				<div class="intro">
 					<p>
 						A personalized, interactive and integrated platform to
@@ -253,9 +261,12 @@
 					/>
 				</div>
 			</div>
-			<div style="background-color: #F2F2F2;">
-				<div class="whyus">
-					<div style="display:inline-block; margin-right: 80px;">
+			<div class="row" style="background-color: #F2F2F2;">
+				<div class="whyus" style="justify-content: center">
+					<div
+						class="col"
+						style="display:inline-block; vertical-align: middle"
+					>
 						<img
 							src="https://image.flaticon.com/icons/svg/148/148968.svg"
 							style="height: 80px; width: 80px; margin-left: 10px;"
@@ -269,7 +280,10 @@
 						</div>
 					</div>
 
-					<div style="display:inline-block; margin-right: 80px;">
+					<div
+						class="col"
+						style="display:inline-block; vertical-align: middle"
+					>
 						<img
 							src="https://image.flaticon.com/icons/svg/265/265755.svg"
 							style="height: 80px; width: 80px; margin-left: 10px;"
@@ -282,7 +296,10 @@
 							</b>
 						</div>
 					</div>
-					<div style="display:inline-block; margin-right: 80px;">
+					<div
+						class="col"
+						style="display:inline-block; vertical-align: middle"
+					>
 						<img
 							src="https://image.flaticon.com/icons/svg/321/321834.svg"
 							style="height: 80px; width: 80px; margin-left: 10px;"

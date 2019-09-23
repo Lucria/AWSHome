@@ -19,7 +19,7 @@
 			@import url(https://fonts.googleapis.com/css?family=Fira+Sans);
 
 			.background {
-				background-image: url("http://www.espn.com/photo/2016/0125/010_Surf_JAWS.JPG");
+				background-image: url("./background.jpg");
 				padding-bottom: 15px;
 			}
 
@@ -27,7 +27,6 @@
 				height: 50px;
 				width: 300px;
 				margin-top: 20px;
-				margin-left: 170px;
 			}
 
 			.intro {
@@ -52,22 +51,29 @@
 			}
 
 			#sections {
-				margin-left: 420px;
 				display: inline-block;
+			}
+
+			.topnav {
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
 			}
 		</style>
 	</head>
 	<body>
 		<div class="background">
-			<heading style="display: inline-block;">
-				<a href="./awshome.html">
-					<img src="./TEST.svg" />
-				</a>
-			</heading>
-			<div id="sections">
-				<button id="tools">About Us</button>
-				<button id="tools">Courses for You</button>
-				<button id="tools" class="signin">Sign In</button>
+			<div class="topnav">
+				<heading style="display: inline-block;">
+					<a href="./awshome.html"><img src="./TEST.svg"/></a>
+				</heading>
+				<div id="sections">
+					<button id="tools">About Us</button>
+					<button id="tools" class="recommend">
+						Courses for You
+					</button>
+					<button id="tools" class="signout">Sign Out</button>
+				</div>
 			</div>
 			<div class="intro">
 				<p>These are the recommended courses for you to take!</p>

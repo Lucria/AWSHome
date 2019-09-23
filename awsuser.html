@@ -3,7 +3,7 @@
 		<meta charset="utf-8" />
 		<title>Up Your Game!</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<link
 			rel="stylesheet"
@@ -22,7 +22,7 @@
 
 			.background {
 				/* background-color: #0e6bbfff; */
-				background-image: url("http://www.espn.com/photo/2016/0125/010_Surf_JAWS.JPG");
+				background-image: url("./background.jpg");
 				padding-bottom: 15px;
 			}
 
@@ -36,7 +36,6 @@
 				height: 50px;
 				width: 300px;
 				margin-top: 20px;
-				margin-left: 170px;
 			}
 
 			header {
@@ -59,7 +58,6 @@
 			}
 
 			#sections {
-				margin-left: 420px;
 				display: inline-block;
 			}
 
@@ -68,7 +66,7 @@
 				height: 80px;
 				border-radius: 50%;
 				display: inline-block;
-				margin-top: -50px;
+				margin-top: -10px;
 			}
 
 			.info {
@@ -81,13 +79,14 @@
 
 			.profile {
 				margin-top: 35px;
-				margin-left: 410px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
 			}
 
 			#progress {
 				width: 500px;
 				height: 90px;
-				margin-left: 470px;
 				margin-top: 10px;
 			}
 
@@ -105,6 +104,7 @@
 				font-family: "Oxygen", sans-serif;
 				text-align: center;
 				margin-bottom: 20px;
+				margin-top: 20px;
 			}
 
 			.mods {
@@ -127,30 +127,53 @@
 			#badges {
 				color: white;
 				font-family: "Oxygen", sans-serif;
-				display: inline-block;
+				display: block;
 				font-size: 20px;
 				margin-top: -80px;
-				margin-left: 660px;
 				text-align: center;
 			}
 
 			#badge {
-				margin-left: 570px;
-				margin-top: -40px;
+				margin-top: 0px;
+				height: 60px;
+				width: 100%;
 			}
+
+			.center {
+				display: flex;
+				justify-content: center;
+			}
+
+			.topnav {
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+			}
+
 		</style>
 	</head>
 
 	<body>
 		<div class="background">
-			<heading style="display: inline-block;">
-				<a href="./awshome.html"><img src="./TEST.svg"/></a>
-			</heading>
-			<div id="sections">
-				<button id="tools">About Us</button>
-				<button id="tools" class="recommend">Courses for You</button>
-				<button id="tools" class="signout">Sign Out</button>
+			<div class="topnav">
+				<heading style="display: inline-block;">
+					<a href="./awshome.html"><img src="./TEST.svg"/></a>
+				</heading>
+				<div id="sections">
+					<button id="tools">About Us</button>
+					<button id="tools" class="recommend">
+						Courses for You
+					</button>
+					<button
+						id="tools"
+						class="signout"
+						style="margin-left: 19px"
+					>
+						Sign Out
+					</button>
+				</div>
 			</div>
+
 			<div class="profile">
 				<img
 					src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-1/c2.0.320.320a/p320x320/37145287_10156491710236591_7799242052088102912_n.jpg?_nc_cat=107&_nc_oc=AQnhG9z4YyEQSk-Wz9dobGxktNp5qTJNjFnGfxeNZqfwcBJXLIni9SkROGEDVMXxbyg&_nc_ht=scontent-sin6-1.xx&oh=2713011de40a6fd422bb2790d47fd586&oe=5E0BCA16"
@@ -163,7 +186,9 @@
 					</b>
 				</div>
 			</div>
-			<img src="./progress.svg" id="progress" />
+			<div class="center">
+				<img src="./progress.svg" id="progress" />
+			</div>
 			<p class="cert">You are 78% through your journey of achieving</p>
 			<p class="cert">a Computer Science certificate!</p>
 			<div
@@ -182,8 +207,6 @@
 						CS3203 Software Engineering project
 					</p>
 				</div>
-				<!--             <div class="vl"></div>
- -->
 				<div class="mods" style="margin-left: 200px;">
 					<b>
 						<p class="section">Your Current Modules</p>
@@ -199,24 +222,28 @@
 					</p>
 				</div>
 			</div>
-			<p id="badges">Your Badges</p>
-			<img
-				src="https://image.flaticon.com/icons/svg/2103/2103855.svg"
-				id="badge"
-			/>
-			<p
-				style="color: white; text-align: center; font-family: 'Oxygen', sans-serif; margin-top: 5px; margin-bottom: 20px;"
-			>
-				Data Scientist
-			</p>
+			<div class="center">
+				<div class="col-sm-2">
+					<p id="badges">Your Badges</p>
+					<img
+						src="https://image.flaticon.com/icons/svg/2103/2103855.svg"
+						id="badge"
+					/>
+					<p
+						style="color: white; text-align: center; font-family: 'Oxygen', sans-serif; margin-top: 5px; margin-bottom: 20px;"
+					>
+						Data Scientist
+					</p>
+				</div>
+			</div>
 		</div>
 	</body>
 	<script>
 		$(".signout").click(function() {
 			window.location = "./awshome.html";
-        });
-        $(".recommend").click(function() {
-            window.location = "./courserecommendation.html"
-        })
-    </script>
+		});
+		$(".recommend").click(function() {
+			window.location = "./courserecommendation.html";
+		});
+	</script>
 </html>
